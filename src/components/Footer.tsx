@@ -8,7 +8,10 @@ function Footer() {
         Frontend Mentor
       </a>{" "}
       Coded by{" "}
-      <a href="" target="_blank">
+      <a
+        href="https://github.com/Pakkerman/expensesChartComponent"
+        target="_blank"
+      >
         Pakkerman
       </a>
     </div>

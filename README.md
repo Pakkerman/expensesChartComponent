@@ -1,28 +1,35 @@
-# Create T3 App
+# Frontend Mentor - Expenses chart component solution
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## What's next? How do I make an app with this?
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+### Solution Requirements
+- [x] View the bar chart and hover over the individual bars to see the correct amounts for each day
+- [x] See the current day's bar highlighted in a different colour to the other bars
+- [x] View the optimal layout for the content depending on their device's screen size
+- [x] Hover states for all interactive elements on the page
+- [x] Bonus: Dynamically generate bars based on the data provided in the data.json file
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### Modifications
+- [x] Random balance on load
+- [x] Display computed week total instead of month total
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+### Tasks
+- [x] Style mobile layout
+- [x] Style destop layout 
+- [x] Chart
+  - [x] Scale dynamically depending on the input data.json
+  - [x] max spending is always full bar, and others scale accordingly
+  - [x] Hover and shows amount 
 
-## Learn More
+### Links
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- [Github repo](https://github.com/Pakkerman/expensesChartComponent)
+- [Deployed on Vercel](https://expenses-chart-component-fawn.vercel.app/)
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Built with
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- [Create T3 App](https://create.t3.gg/)
+- Style with [TailwindCSS](https://tailwindcss.com/)
+- Form Validation with [Formik](https://formik.org/) and [yup](https://github.com/jquense/yup)
 
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.

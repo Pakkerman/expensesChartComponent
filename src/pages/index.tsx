@@ -1,21 +1,16 @@
 import Head from "next/head"
 import { useEffect, useState } from "react"
-import Footer from "~/components/Footer"
+
 import data from "~/data.json"
 
-const BAR_HEIGHT = 200
-const DAY_OF_THE_WEEK = new Date().getDay()
+// Components
+import Chart from "~/components/Chart"
+import Footer from "~/components/Footer"
 
 export default function Home() {
-  const [chartHeights, setChartHeights] = useState<Array<number>>([])
   const [balance, setBalance] = useState<string>("0.00")
 
   useEffect(() => {
-    let maxAmount = 0
-    data.forEach((item) => (maxAmount = Math.max(maxAmount, item.amount)))
-    setChartHeights(
-      data.map((item) => Math.ceil((item.amount / maxAmount) * BAR_HEIGHT))
-    )
     setBalance((Math.random() * 1200).toFixed(2))
   }, [])
 
@@ -45,42 +40,7 @@ export default function Home() {
             Spending - Last 7 days
           </h1>
 
-          {/* bar chart */}
-          {/* Use the max value as the height, and other values are the percentage to the max value
-            and then use the percentage to calculate height, 0% is 0px 100% is 250px */}
-          <ul className=" flex h-[250px] w-full items-end justify-between text-sm">
-            {chartHeights.map((height, idx) => (
-              <li
-                key={height}
-                className="group relative w-10 transition-all md:w-14"
-              >
-                <div
-                  className={`mx-auto w-8 rounded-md transition-all hover:cursor-pointer  hover:opacity-75 md:w-10  ${
-                    idx + 1 === DAY_OF_THE_WEEK
-                      ? "bg-PrimaryCyan"
-                      : "bg-PrimarySoftRed "
-                  }`}
-                  style={{ height }}
-                />
-                <div className="absolute left-[50%] top-[-37.5px] z-10 w-16 translate-x-[-50%] rounded-md bg-DarkBrown opacity-0 transition-all group-hover:opacity-100">
-                  <p className="text-center leading-8 text-VeryPaleOrange">
-                    ${data[idx]?.amount}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-          {/* day label */}
-          <ul className="flex justify-between ">
-            {data.map((item) => (
-              <li
-                key={item.day}
-                className="w-10 text-center text-sm transition-all md:w-14"
-              >
-                {item.day}
-              </li>
-            ))}
-          </ul>
+          <Chart />
 
           <div className="my-4 border-[1px]" />
           <div className="flex w-full items-end justify-between">
@@ -96,7 +56,7 @@ export default function Home() {
             </div>
             <div className="text-right">
               <p className="font-bold text-DarkBrown">+2.4%</p>
-              <p>from last month</p>
+              <p>from last week</p>
             </div>
           </div>
         </section>

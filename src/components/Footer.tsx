@@ -4,7 +4,10 @@ function Footer() {
   return (
     <div className="attribution w-full pb-2 pt-6">
       Challenge by{" "}
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+      <a
+        href="https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt"
+        target="_blank"
+      >
         Frontend Mentor
       </a>{" "}
       Coded by{" "}

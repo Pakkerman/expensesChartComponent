@@ -27,4 +27,4 @@
 
 
 ### Refactors 
-- [ ] 
+- [x] Extract components
